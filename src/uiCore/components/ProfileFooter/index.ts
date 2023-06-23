@@ -1,0 +1,1 @@
+export { ProfileFooter } from "./ProfileFooter"

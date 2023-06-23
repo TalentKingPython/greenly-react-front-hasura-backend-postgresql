@@ -1,0 +1,1 @@
+export { MailForm } from "./MailForm";

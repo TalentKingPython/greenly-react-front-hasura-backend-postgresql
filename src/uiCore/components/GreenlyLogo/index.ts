@@ -1,0 +1,1 @@
+export { GreenlyLogo } from "./GreenlyLogo";

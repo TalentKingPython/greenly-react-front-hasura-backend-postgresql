@@ -1,0 +1,121 @@
+{
+  "homepage": "https://greenly.co",
+  "name": "greenly",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.3.14",
+    "@babel/polyfill": "^7.12.1",
+    "@draft-js-plugins/counter": "^4.1.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "4.12.3",
+    "@material-ui/icons": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.60",
+    "@material-ui/styles": "4.11.4",
+    "@mui/material": "^5.8.3",
+    "@types/draft-convert": "^2.1.2",
+    "@types/draftjs-to-html": "^0.8.0",
+    "@types/jest": "^26.0.21",
+    "@types/node": "^12.20.6",
+    "@types/react-draft-wysiwyg": "^1.13.2",
+    "@types/react-modal": "^3.12.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-test-renderer": "^17.0.1",
+    "apollo-link-http": "^1.5.17",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.1",
+    "clsx": "^1.1.1",
+    "draft-convert": "^2.1.11",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "firebase": "^9.9.3",
+    "graphql": "^15.5.0",
+    "immutable": "^4.0.0-rc.12",
+    "just-clone": "^3.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.14.7",
+    "react-firebaseui": "^6.0.0",
+    "react-icons": "^4.2.0",
+    "react-mailchimp-subscribe": "^2.1.3",
+    "react-modal": "^3.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.1",
+    "react-test-renderer": "^17.0.2",
+    "serve": "^14.2.0",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "build": "react-scripts build",
+    "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
+    "serve": "serve -s build",
+    "test": "TZ=UTC NODE_ENV=test jest --config=jest.config.js",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint src --ext .ts --ext .tsx",
+    "db:postgres": "node ./scripts/development/postgres.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/node-logger": "^6.5.14",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.14",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-mailchimp-subscribe": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint-config-react-app": "^7.0.1",
+    "factory.ts": "^1.3.0",
+    "firebase-mock": "^2.3.2",
+    "storybook-addon-apollo-client": "^4.0.13",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "typescript": "^4.5.2",
+    "webpack": "5"
+  },
+  "resolutions": {
+    "@types/react": "17.0.38"
+  }
+}

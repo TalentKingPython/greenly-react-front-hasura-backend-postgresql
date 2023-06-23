@@ -1,0 +1,1 @@
+export { MailFormFooter } from "./MailFormFooter";
